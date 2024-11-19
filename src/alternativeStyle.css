@@ -1,0 +1,74 @@
+:root {
+    --house-width: 600px;
+  }
+  
+  body {
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #b3d5f9 1%,#ade8ff 70%,#b1b5ea 100%); 
+    margin: 0;
+  }
+  
+  #houses {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    align-items: flex-end;
+    min-height: 100vh;
+  }
+  
+  #house1, #house3 {
+    width: calc(50vw - var(--house-width)/2);
+    background-color: rgb(103, 102, 102);
+    height: 100px;
+  }
+  
+  #house2 {
+    width: var(--house-width);
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #roof {
+    height: 200px;
+    margin-top: 100px;
+  }
+  
+  #roofBg {
+    position: absolute;
+    z-index: 1;
+    width: var(--house-width);
+    height: 200px;
+    background-color: rgb(94, 53, 30);
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='400%25' width='400%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='113' height='113' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(180)'%3E%3Crect width='100%25' height='100%25' fill='rgba(123, 52, 30,1)'/%3E%3Cpath d='M20 9.5a 20 20 0 0 1 40 0h1a 1 1 0 0 1-2 0a 19 19 0 0 0-38 0a 1 1 0 0 1-2 0a 19 19 0 0 0-38 0h-1a 20 20 0 0 1 40 0z' fill='rgba(156, 66, 33,1)'/%3E%3Cpath d='M0 29.5a 20 20 0 0 1 40 0h1a 1 1 0 0 1-2 0a 19 19 0 0 0-38 0a 1 1 0 0 1-2 0z' fill='rgba(156, 66, 33,1)'/%3E%3Cpath d='M20 49.5a 20 20 0 0 1 40 0h1a 1 1 0 0 1-2 0a 19 19 0 0 0-38 0a 1 1 0 0 1-2 0a 19 19 0 0 0-38 0h-1a 20 20 0 0 1 40 0z' fill='rgba(156, 66, 33,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+    transform: perspective(100px) rotateX(1deg);
+    border-radius: 5px;
+  }
+  
+  #roofContent {
+    width: var(--house-width);
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .roofWindow{
+    width: 60px;
+    height: 60px;
+    background-color: #b3d5f9;
+    border: 10px solid white;
+    transform: perspective(100px) rotateX(10deg);
+  }
+  
+  #building {
+    box-shadow: inset 0 22px 5px -20px #000;
+    background-image: url("./white-wall.jpg");
+    background-size: 100px 100px;
+    flex-grow: 20;
+  }

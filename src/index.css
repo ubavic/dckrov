@@ -1,0 +1,185 @@
+:root {
+  --house-width: 700px;
+}
+
+body {
+  border-radius: 5px;
+  background: hsl(210, 86%, 81%);
+  margin: 0;
+  font-family: "Major Mono Display", monospace;
+}
+
+h1 {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#houses {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+
+#house1 {
+  width: calc(50vw - var(--house-width) / 2);
+  background-color: rgba(103, 102, 102, 0);
+  align-self: stretch;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 100px;
+  position: fixed;
+}
+
+#house3 {
+  width: calc(50vw - var(--house-width) / 2);
+  background-color: rgba(103, 102, 102, 0);
+  height: 100px;
+}
+
+#house2 {
+  width: var(--house-width);
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#roof {
+  height: 200px;
+  margin-top: 100px;
+}
+
+#roofBg {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='200%25' width='200%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='82' height='82' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'%3E%3Crect width='100%25' height='100%25' fill='rgba(248, 208, 165,1)'/%3E%3Cpath d='M0 40a 9-9 0 0 0 9-9a 11-11 0 0 1 11-11a 9-9 0 0 0 9-9a 11-11 0 0 1 11-11v2a-9 9 0 0 0-9 9a-11 11 0 0 1-11 11a-9 9 0 0 0-9 9a-11 11 0 0 1-11 11zM0 0a 9-9 0 0 0 9-9h2a-11 11 0 0 1-11 11z' fill='rgba(26, 32, 44,0)'/%3E%3Cpath d='M0 0a 9.5-9.5 0 0 0 9.5-9.5a 10.5-10.5 0 0 1 10.5-10.5a 9.5-9.5 0 0 0 9.5-9.5a 10.5-10.5 0 0 1 10.5-10.5v1a-9.5 9.5 0 0 0-9.5 9.5a-10.5 10.5 0 0 1-10.5 10.5a-9.5 9.5 0 0 0-9.5 9.5a-10.5 10.5 0 0 1-10.5 10.5zM0 40a 9.5-9.5 0 0 0 9.5-9.5a 10.5-10.5 0 0 1 10.5-10.5a 9.5-9.5 0 0 0 9.5-9.5a 10.5-10.5 0 0 1 10.5-10.5v1a-9.5 9.5 0 0 0-9.5 9.5a-10.5 10.5 0 0 1-10.5 10.5a-9.5 9.5 0 0 0-9.5 9.5a-10.5 10.5 0 0 1-10.5 10.5z ' fill='rgba(26, 32, 44,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  position: absolute;
+  z-index: 1;
+  width: var(--house-width);
+  height: 200px;
+  border: 2px solid #373737;
+  transform: perspective(100px) rotateX(1deg);
+  border-radius: 5px;
+}
+
+#roofContent {
+  width: var(--house-width);
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.roofWindow {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #373737;
+  background-color: #ebf1f7;
+  border-radius: 5px;
+}
+
+#antenaContainer {
+  position: relative;
+  float: right;
+}
+
+#antena {
+  position: absolute;
+  top: -300px;
+  height: 500px;
+  width: 3px;
+  border-radius: 10px;
+  border: 2px solid #373737;
+  background: #ebf1f7;
+}
+
+#building {
+  background: #ebf1f7;
+  background-size: 100px 100px;
+  flex-grow: 20;
+  border: 2px solid #373737;
+  border-bottom: none;
+}
+
+#topStory {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#topStory h2 {
+  margin-top: 0;
+  margin-left: 1rem;
+}
+
+#topStory .windowRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#topStory .window {
+  border: 2px solid #373737;
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  background-color: #2f3a45;
+}
+
+#storySeparator {
+  background-color: #ebf1f7;
+  height: 10px;
+  border: 2px solid #373737;
+  border-bottom-width: 5px;
+  border-radius: 5px;
+  position: absolute;
+  width: var(--house-width);
+  transform: scale(1.02) translateX(-5px);
+}
+
+#story {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#story .window {
+  border: 2px solid #373737;
+  width: 100px;
+  height: 160px;
+  border-radius: 3px;
+  padding: 5px;
+  user-select: none;
+}
+
+#story .window > div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #373737;
+  font-weight: bold;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#story .window > div span {
+  vertical-align: middle;
+  display: inline-block;
+}
